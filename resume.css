@@ -1,0 +1,122 @@
+
+header {
+    padding: 20px 50px;
+}
+header h1 {
+    font-size: 4em;
+}
+main > article {
+    height: 350px;
+}
+/*Custom carousel without the use of javascript
+section#carousel > figure > img { /*hides the figure elements in section with id carousel
+    display: none;
+    margin: 0px auto;
+}
+section#carousel > figure.visible >img {/*shows only the figure elements that reference the class visible.
+    display: block; 
+    position: relative;
+    overflow: hidden; 
+}
+section#carousel > figure > figcaption {/*will hide the figcaption elements by default
+    display: none; 
+}
+section#carousel > figure.visible > figcaption {/*will show only the figcaption elements that reference the class visible
+    display: block; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5 em;
+}
+*/
+
+/* CSS rules to center image in bootstrap carousel*/
+section#carousel > div {
+    background-color: lightgray;
+    height: 350px;
+    padding: 50px;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+.carousel .item > img {
+    display: inline-block;
+}
+
+main {
+    padding: 5px 10px;
+}
+main  figure > figcaption {
+    font-size: 0.75em;
+    font-style: italic;
+}
+main figure > figcaption::before {
+    content: 'Pictured above: ';
+    font-weight: bold;
+}
+
+article > time {
+    float: right;
+    font-size: 0.75em;
+    font-weight: lighter;
+}
+/* Importing external fonts - news_cycle.ttf and contrail_one.ttf */
+@font-face {
+    font-family: News Cycle;
+    src: url(C:\Users\Christi\HTML course\fonts\mod3_news_cycle.tff) format('truetype'); 
+}
+@font-face {
+    font-family: Contrail One;
+    src: url(C:\Users\Christi\HTML course\fonts\mod3_contrail_one.tff) format('truetype');
+}
+body {
+    font-family: News Cycle !important;
+}
+header {
+    font-family: Contrail One;
+}
+/* Add a shadow for each article - a thin shadow which serves as a separator for each article 
+article {
+    margin: 5px 0px;
+    padding: 5px 5px;
+    box-shadow: -1px -1px 6px #888888;
+}*/
+
+/* Styling of colors for web page not for print */
+@media not print {
+body {
+    color: #635959
+}
+header {
+    background-color: #242323;
+    color: #efefef
+}
+h3, article > h4 {
+    color: #8c1018;    
+}
+article a {
+    color: #314052;
+}
+}
+@media not print {
+    main > h3 {
+    font-size: 2em;
+}
+}
+/* Styling for print outs */
+@media print{
+    header {
+        padding: 0px;
+    }
+     header  h1 {
+        font-size: 2em;
+        display: none;
+    }
+    header  h2 {
+        display: none;
+    }
+    article {
+        box-shadow:none;
+    }
+    
+}
